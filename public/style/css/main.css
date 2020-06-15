@@ -1,6 +1,7 @@
-html {
+body {
   margin: 0;
   padding: 0;
+  font-family: "Nunito", sans-serif;
 }
 
 .all-products {
@@ -17,9 +18,6 @@ html {
   }
 }
 
-.product {
-  font-family: "PT Sans", sans-serif;
-}
 .product img {
   display: block;
 }
@@ -37,7 +35,7 @@ html {
     border-radius: 3px;
     border: 1px solid #e6e6e6;
     background-color: #ffffff;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     margin-left: 20%;
     margin-right: 20%;
   }
@@ -50,8 +48,8 @@ html {
 }
 
 .product-user-avatar {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
 }
 
 .product-user-avatar img {
@@ -61,7 +59,8 @@ html {
 }
 
 .product-user-nickname {
-  margin-left: 10px;
+  font-size: 13px;
+  margin-left: 8px;
   font-weight: bold;
   color: #4e5ccc;
 }
@@ -84,7 +83,10 @@ html {
 .product-image-bg .product-title-price {
   position: absolute;
   bottom: 8px;
-  left: 16px;
+  left: 12px;
+}
+.product-image-bg .product-title-price .product-title {
+  font-size: 13px;
 }
 .product-image-bg .product-title-price .product-price {
   font-weight: bold;
@@ -154,7 +156,6 @@ nav {
   position: fixed;
   overflow: hidden;
   background-color: #fb619b;
-  font-family: "PT Sans", sans-serif;
 }
 @media screen and (max-width: 375px) {
   nav {
@@ -183,6 +184,10 @@ nav {
   flex-direction: row;
   text-align: center;
   color: #ffffff;
+  font-size: 15px;
+}
+.nav-menus div {
+  cursor: pointer;
 }
 @media screen and (max-width: 375px) {
   .nav-menus div {
@@ -199,7 +204,6 @@ nav {
 }
 
 .no-favourites {
-  font-family: "PT Sans", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
