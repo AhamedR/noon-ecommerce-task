@@ -97,7 +97,12 @@ html {
     .product-title-price {
         position: absolute;
         bottom: 8px;
-        left: 16px;
+        left: 12px;
+
+        .product-title {
+            margin-bottom: 2px;
+            font-size: 14px;
+        }
 
         .product-price {
             font-weight: bold;

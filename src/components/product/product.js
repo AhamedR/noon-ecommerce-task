@@ -67,7 +67,9 @@ class products extends Component {
                                     />
                                 </div>
                                 <div className="product-title-price">
-                                    {item.title}
+                                    <div className="product-title">
+                                        {item.title}
+                                    </div>
                                     <div className="product-price">
                                         {item.price}
                                     </div>

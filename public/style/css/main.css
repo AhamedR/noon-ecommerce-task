@@ -84,7 +84,11 @@ html {
 .product-image-bg .product-title-price {
   position: absolute;
   bottom: 8px;
-  left: 16px;
+  left: 12px;
+}
+.product-image-bg .product-title-price .product-title {
+  margin-bottom: 2px;
+  font-size: 14px;
 }
 .product-image-bg .product-title-price .product-price {
   font-weight: bold;
