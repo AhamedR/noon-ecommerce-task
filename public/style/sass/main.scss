@@ -1,0 +1,221 @@
+// Colours
+$text-color: #4e5ccc;
+$product-border-color: #e6e6e6;
+$caption-text-color: #c5c5c5;
+$heart-stork-color: #a0a0a0;
+$heart-not-like-color: #7c7c7cb7;
+$product-background-color: #ffffff;
+$product-like-heart-color: #f80000;
+$nav-bar-background-color: #fb619b;
+$product-not-like-heart-color: #757575;
+$linear-gradient-product-tint: linear-gradient(0deg, rgba(0,0,0,0.700717787114846) 0%, rgba(179,205,15,0) 79%);
+
+// Screen sizes
+$mobile-width: 375px;
+$desktop-width: 1024px;
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.all-products {
+    margin: 0;
+
+    @media screen and (max-width: $mobile-width) {
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+        margin-top: 60px;
+    }
+}
+
+.product {
+    font-family: 'PT Sans', sans-serif;
+
+    img {
+        display: block;
+    }
+
+    @media screen and (max-width: $mobile-width) {
+        border-bottom: 2px solid $product-border-color;
+
+        img {
+            left: 0;
+            right: 0;
+        }
+    }
+
+    @media screen and (min-width: $desktop-width) {
+        border-radius: 3px;
+        border: 1px solid $product-border-color;
+        background-color: $product-background-color;
+        margin-bottom: 60px;
+        margin-left : 20%;
+        margin-right: 20%;
+    }
+}
+
+.product-user {
+    display: flex;
+    padding: 15px 10px 10px 10px;
+    align-items: center;
+}
+
+.product-user-avatar {
+    width: 40px;
+    height: 40px;
+}
+
+.product-user-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.product-user-nickname {
+    margin-left: 10px;
+    font-weight: bold;
+    color: $text-color;
+}
+
+.product-image-bg {
+    position: relative;
+    text-align: left;
+    color: white;
+
+    .tint:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: $linear-gradient-product-tint;
+    }
+
+    .product-title-price {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+
+        .product-price {
+            font-weight: bold;
+        }
+    }
+
+    .favourite {
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+        font-size: 20px;
+
+        &.liked {
+            color: $product-like-heart-color;
+        }
+
+        &.not-liked {
+            @supports (-webkit-text-stroke: 1px $heart-stork-color) {
+                -webkit-text-stroke: 1px $heart-stork-color;
+                -webkit-text-fill-color: $heart-not-like-color;
+            }
+
+            color: $product-not-like-heart-color;
+        }
+    }
+}
+
+.product-favourite {
+    font-size: 15px;
+    color: $text-color;
+
+    .not-liked {
+        @supports (-webkit-text-stroke: 1px $heart-stork-color) {
+            -webkit-text-stroke: 1px $heart-stork-color;
+            -webkit-text-fill-color: $heart-not-like-color;
+        }
+
+        color:$product-not-like-heart-color;
+    }
+
+    .like-count {
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
+
+.product-image img {
+    object-fit: cover;
+    display: block;
+    width: 100%;
+}
+
+.product-details {
+    padding: 12px 5px 20px 5px;
+
+    .product-caption, .product-comment {
+        padding-top: 8px;
+        font-size: 12px;
+        color: $heart-stork-color;
+    }
+
+    .product-hashtags {
+        font-size: 12px;
+        color: $text-color;
+    }
+}
+
+// Navigation
+nav {
+    z-index: 2;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: block;
+    position: fixed;
+    overflow: hidden;
+    background-color: $nav-bar-background-color;
+    font-family: 'PT Sans', sans-serif;
+
+    @media screen and (max-width: $mobile-width) {
+        font-size: 18px;
+        bottom: 0;
+        span {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: $desktop-width) {
+        top: 0;
+        font-size: 12px;
+        i {
+            display: none;
+        }
+    }
+}
+.nav-menus {
+    width: 100%;
+    height: 77px;
+    display: flex;
+    padding-top: 17px;
+    flex-direction: row;
+    text-align: center;
+    color: $product-background-color;
+
+    @media screen and (max-width: $mobile-width) {
+        div {
+            width:50%;
+            height:100%;
+            float:left;
+        }
+    }
+
+    @media screen and (min-width: $desktop-width) {
+        div {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+}
