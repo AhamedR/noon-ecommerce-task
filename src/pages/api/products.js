@@ -6,22 +6,6 @@ export default (req, res) => {
             {
                 id: 1,
                 owner: {
-                    name      : 'Noah william',
-                    profileUrl: '/images/profiles/user1.jpg'
-                },
-                item: {
-                    title       : 'Ladies smartphone cover',
-                    price       : 'AED 500',
-                    caption     : 'Best durable ladies smartphone cover',
-                    hashtags    : '#smartPhone #mobiles #noon',
-                    likeCount   : 89,
-                    itemImageUrl: '/images/products/product1.jpg',
-                    commentCount: 22,
-                }
-            },
-            {
-                id: 2,
-                owner: {
                     name      : 'Olivia emma',
                     profileUrl: '/images/profiles/user2.jpg'
                 },
@@ -33,6 +17,22 @@ export default (req, res) => {
                     likeCount   : 32,
                     itemImageUrl: '/images/products/product2.jpg',
                     commentCount: 12,
+                }
+            },
+            {
+                id: 2,
+                owner: {
+                    name      : 'Noah william',
+                    profileUrl: '/images/profiles/user1.jpg'
+                },
+                item: {
+                    title       : 'Ladies smartphone cover',
+                    price       : 'AED 500',
+                    caption     : 'Best durable ladies smartphone cover',
+                    hashtags    : '#smartPhone #mobiles #noon',
+                    likeCount   : 89,
+                    itemImageUrl: '/images/products/product1.jpg',
+                    commentCount: 22,
                 }
             },
             {

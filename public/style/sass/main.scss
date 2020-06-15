@@ -15,9 +15,10 @@ $linear-gradient-product-tint: linear-gradient(0deg, rgba(0,0,0,0.70071778711484
 $mobile-width: 375px;
 $desktop-width: 1024px;
 
-html {
+body {
     margin: 0;
     padding: 0;
+    font-family: 'Nunito', sans-serif;
 }
 
 .all-products {
@@ -32,7 +33,6 @@ html {
 }
 
 .product {
-    font-family: 'PT Sans', sans-serif;
     img {
         display: block;
     }
@@ -49,7 +49,7 @@ html {
         border-radius: 3px;
         border: 1px solid $product-border-color;
         background-color: $product-background-color;
-        margin-bottom: 60px;
+        margin-bottom: 20px;
         margin-left : 20%;
         margin-right: 20%;
     }
@@ -62,8 +62,8 @@ html {
 }
 
 .product-user-avatar {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
 }
 
 .product-user-avatar img {
@@ -73,7 +73,8 @@ html {
 }
 
 .product-user-nickname {
-    margin-left: 10px;
+    font-size: 13px;
+    margin-left: 8px;
     font-weight: bold;
     color: $text-color;
 }
@@ -100,8 +101,7 @@ html {
         left: 12px;
 
         .product-title {
-            margin-bottom: 2px;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .product-price {
@@ -180,7 +180,6 @@ nav {
     position: fixed;
     overflow: hidden;
     background-color: $nav-bar-background-color;
-    font-family: 'PT Sans', sans-serif;
 
     @media screen and (max-width: $mobile-width) {
         font-size: 18px;
@@ -206,6 +205,10 @@ nav {
     flex-direction: row;
     text-align: center;
     color: $product-background-color;
+    font-size: 15px;
+    div {
+        cursor: pointer;
+    }
 
     @media screen and (max-width: $mobile-width) {
         div {
@@ -225,7 +228,6 @@ nav {
 
 // No favourites style
 .no-favourites {
-    font-family: 'PT Sans', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
