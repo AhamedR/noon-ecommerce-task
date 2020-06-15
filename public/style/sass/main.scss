@@ -4,6 +4,7 @@ $product-border-color: #e6e6e6;
 $caption-text-color: #c5c5c5;
 $heart-stork-color: #a0a0a0;
 $heart-not-like-color: #7c7c7cb7;
+$no-favourites-message: #757575;
 $product-background-color: #ffffff;
 $product-like-heart-color: #f80000;
 $nav-bar-background-color: #fb619b;
@@ -21,7 +22,6 @@ html {
 
 .all-products {
     margin: 0;
-
     @media screen and (max-width: $mobile-width) {
         margin-bottom: 60px;
     }
@@ -33,14 +33,12 @@ html {
 
 .product {
     font-family: 'PT Sans', sans-serif;
-
     img {
         display: block;
     }
 
     @media screen and (max-width: $mobile-width) {
         border-bottom: 2px solid $product-border-color;
-
         img {
             left: 0;
             right: 0;
@@ -153,7 +151,7 @@ html {
 }
 
 .product-details {
-    padding: 12px 5px 20px 5px;
+    padding: 12px 8px 20px 8px;
 
     .product-caption, .product-comment {
         padding-top: 8px;
@@ -218,4 +216,15 @@ nav {
             padding-right: 16px;
         }
     }
+}
+
+// No favourites style
+.no-favourites {
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: $no-favourites-message;
+    overflow: hidden;
 }
