@@ -15,6 +15,6 @@ Then, open project derectory goto
 src/config/config.js
 ```
 
-Update the host address accordingly by default [http://localhost:3000](http://localhost:3000) is added
+Update the host address accordingly, by default [http://localhost:3000](http://localhost:3000) is added
 
 Thats it !
