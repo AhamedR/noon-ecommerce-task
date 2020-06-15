@@ -2,6 +2,7 @@ import React, { Component }  from 'react';
 import Layout from '../components/layout';
 import Product from '../components/product/product';
 import NavBar from '../components/Navigation/navigationBar';
+import config from '../config/config';
 
 class Home extends Component {
     state = {
@@ -91,8 +92,7 @@ class Home extends Component {
 }
 
 export async function getStaticProps(){
-    // Update the proxy with your host address
-    const proxy = 'http://localhost:3000';
+    const proxy = config.proxy;
     const res   = await fetch(`${proxy}/api/products`);
     const data  = await res.json()
 
